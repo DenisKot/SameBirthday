@@ -8,8 +8,7 @@ namespace SameBirthday.Utils
         public static string Get(int day, int month, int year)
         {
             var date = new DateTime(year, month, day);
-            // return date.ToString("dd MMMM yyyy", CultureInfo.InvariantCulture);
-            return date.ToString("dd MMMM yyyy", new CultureInfo("ru-RU"));
+            return $"{date.ToString("dd MMMM yyyy", new CultureInfo("ru-RU"))} года";
         }
     }
 }

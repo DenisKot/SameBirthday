@@ -11,6 +11,10 @@ h2{
     font-weight: 700;
 }
 
+.site-header{
+    background-color: #EB6864;
+}
+
 .form-control{
     max-width: 120px;
     display: inline-block;
