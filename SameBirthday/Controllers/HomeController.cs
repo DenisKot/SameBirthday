@@ -11,11 +11,11 @@ namespace SameBirthday.Controllers
         {
             if (Request.QueryString["Day"] != null && Request.QueryString["Month"] != null)
             {
-                string day = Request.QueryString["Day"];
-                string month = Request.QueryString["Month"];
+                int day = int.Parse(Request.QueryString["Day"]);
+                int month = int.Parse(Request.QueryString["Month"]);
 
                 var context = new DatabaseContext();
-                var list = context.Persons.ToList();
+                var list = context.Persons.Where(x => x.Day == day && x.Month == month).ToList();
 
                 this.ViewBag.List = list;
             }
