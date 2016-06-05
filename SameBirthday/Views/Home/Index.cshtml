@@ -7,53 +7,103 @@
     <div class="fd">
         <form id="date" action="" role="form">
             <select id="day" name="day" class="form-control">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10</option>
-                <option>11</option>
-                <option>12</option>
-                <option>13</option>
-                <option>14</option>
-                <option>15</option>
-                <option>16</option>
-                <option>17</option>
-                <option>18</option>
-                <option>19</option>
-                <option>20</option>
-                <option>21</option>
-                <option>22</option>
-                <option>23</option>
-                <option>24</option>
-                <option>25</option>
-                <option>26</option>
-                <option>27</option>
-                <option>28</option>
-                <option>29</option>
-                <option>30</option>
-                <option>31</option>
+                @{
+                    for (int i = 0; i <= 31; i++)
+                    {
+                        if (@ViewBag.Day == i)
+                        {
+                            <option selected="selected">@i</option>
+                        }
+                        else
+                        {
+                            <option>@i</option>
+                        }
+                    }
+                }
             </select>
+
             <select id="month" name="month" class="form-control">
-                <option value="1">Январь</option>
-                <option value="2">Февраль</option>
-                <option value="3">Март</option>
-                <option value="4">Апрель</option>
-                <option value="5">Май</option>
-                <option value="6">Июнь</option>
-                <option value="7">Июль</option>
-                <option value="8">Август</option>
-                <option value="9">Сентябрь</option>
-                <option value="10">Октябрь</option>
-                <option value="11">Ноябрь</option>
-                <option value="12">Декабрь</option>
+                @{
+                    for (int i = 1; i <= 12; i++)
+                    {
+                        if (@ViewBag.Month == i)
+                        {
+                            <option selected="selected" value="@ViewBag.Month">@DateFormer.GetMonth(i)</option>
+                        }
+                        else
+                        {
+                            <option value="@i">@DateFormer.GetMonth(i)</option>
+                        }
+                    }
+                }
             </select>
-            <button type="submit" class="btn btn-primary">Узнать <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+
+        <!--
+        <input id="inputMonth" type="text" name="month" value="1">
+        <input id="inputDay" type="text" name="day" value="1">
+        <div class="btn-toolbar">
+            <div class="btn-group">
+                <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <label id="lbDay">1</label>
+                    <span class="caret"></span>
+                </a>
+                <ul id="days-list" class="dropdown-menu">
+                    <li><a>1</a></li>
+                    <li><a>2</a></li>
+                    <li><a>3</a></li>
+                    <li><a>4</a></li>
+                    <li><a>5</a></li>
+                    <li><a>6</a></li>
+                    <li><a>7</a></li>
+                    <li><a>8</a></li>
+                    <li><a>9</a></li>
+                    <li><a>10</a></li>
+                    <li><a>11</a></li>
+                    <li><a>12</a></li>
+                    <li><a>13</a></li>
+                    <li><a>14</a></li>
+                    <li><a>15</a></li>
+                    <li><a>16</a></li>
+                    <li><a>17</a></li>
+                    <li><a>18</a></li>
+                    <li><a>19</a></li>
+                    <li><a>20</a></li>
+                    <li><a>21</a></li>
+                    <li><a>22</a></li>
+                    <li><a>23</a></li>
+                    <li><a>24</a></li>
+                    <li><a>25</a></li>
+                    <li><a>26</a></li>
+                    <li><a>27</a></li>
+                    <li><a>28</a></li>
+                    <li><a>29</a></li>
+                    <li><a>30</a></li>
+                    <li><a>31</a></li>
+                </ul>
+            </div>
+            <div class="btn-group">
+                <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <label id="lbMonth">Январь</label>
+                    <span class="caret"></span>
+                </a>
+                <ul id="monthes-list" class="dropdown-menu">
+                    <li><a value="1">Январь</a></li>
+                    <li><a value="2">Февраль</a></li>
+                    <li><a value="3">Март</a></li>
+                    <li><a value="4">Апрель</a></li>
+                    <li><a value="5">Май</a></li>
+                    <li><a value="6">Июнь</a></li>
+                    <li><a value="7">Июль</a></li>
+                    <li><a value="8">Август</a></li>
+                    <li><a value="9">Сентябрь</a></li>
+                    <li><a value="10">Октябрь</a></li>
+                    <li><a value="11">Ноябрь</a></li>
+                    <li><a value="12">Декабрь</a></li>
+                </ul>
+            </div>
+        </div>
+            -->
+        <button id="submitBtn" type="submit" class="btn btn-primary">Узнать <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
         </form>
     </div>
 
@@ -70,8 +120,9 @@
                 }
                 else
                 {
-                    imgSrc = "../../Resources/noPicture.png";
+                    imgSrc = "../Image/noPicture.png";
                 }
+                
 
                 <div class="row" id="information">
                     <div class="col-xs-4 col-sm-4 col-sm-3">
@@ -79,40 +130,14 @@
                     </div>
                     <div class="col-xs-8 col-sm-7">
                         <h4 id="name">@item.Name</h4>
-                        <p>Birthday: @DateFormer.Get(item.Day, item.Month, item.Year)</p>
+                        <p>Дата рождения: @DateFormer.Get(item.Day, item.Month, item.Year)</p>
                         <p>@item.Description</p>
                     </div>
-                </div>
+                </div>   
             }
         }
     }
-    
-
 </div>
 
 <br />
 <br />
-<!--
-@{
-    if (ViewBag.List != null)
-    {
-        foreach (var item in ViewBag.List)
-        {
-            string imgSrc = string.Empty;
-            if (item.Image != null)
-            {
-                var base64 = Convert.ToBase64String(item.Image);
-                imgSrc = String.Format("data:image/gif;base64,{0}", base64);
-            }
-
-            <div class="jumbotron">
-                <img src='@imgSrc' />
-                <p>@item.Name</p>
-                <p>Birthday: @item.Day @item.Month @item.Year</p>
-                <p>@item.Description</p>
-                <p>@item.Url</p>
-            </div>
-        }
-    }
-}
-    -->

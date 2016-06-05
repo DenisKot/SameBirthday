@@ -19,6 +19,9 @@ namespace SameBirthday.Controllers
                     var list = context.Persons.Where(x => x.Day == day && x.Month == month).ToList();
                     this.ViewBag.List = list;
                 }
+
+                this.ViewBag.Day = day;
+                this.ViewBag.Month = month;
             }
             else
             {
@@ -27,6 +30,9 @@ namespace SameBirthday.Controllers
                     var list = context.Persons.ToList();
                     this.ViewBag.List = list;
                 }
+
+                this.ViewBag.Day = 1;
+                this.ViewBag.Month = 1;
             }
 
             return View();
