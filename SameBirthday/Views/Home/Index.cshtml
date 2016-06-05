@@ -49,13 +49,15 @@
 @{
     if (ViewBag.List != null)
     {
-        <h2>Not Empty List!</h2>
+        foreach (var item in ViewBag.List)
+        {
+            <div class="jumbotron">
+                <img src='<%= Url.Action( "show", "image", new { id = @item.Id } ) %>' />
+                <p>@item.Name</p>
+                <p>Birthday: @item.Day @item.Month @item.Year</p>
+                <p>@item.Description</p>
+                <p>@item.Url</p>
+            </div>
+        }
     }
 }
-
-<div class="card">
-    <img class="card-img-top" data-src="../../Resources/bg.jpg" alt="Card image cap">
-    <div class="card-block">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    </div>
-</div>

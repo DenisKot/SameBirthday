@@ -14,10 +14,19 @@ namespace SameBirthday.Controllers
                 int day = int.Parse(Request.QueryString["Day"]);
                 int month = int.Parse(Request.QueryString["Month"]);
 
-                var context = new DatabaseContext();
-                var list = context.Persons.Where(x => x.Day == day && x.Month == month).ToList();
-
-                this.ViewBag.List = list;
+                using (var context = new DatabaseContext())
+                {
+                    var list = context.Persons.Where(x => x.Day == day && x.Month == month).ToList();
+                    this.ViewBag.List = list;
+                }
+            }
+            else
+            {
+                using (var context = new DatabaseContext())
+                {
+                    var list = context.Persons.ToList();
+                    this.ViewBag.List = list;
+                }
             }
 
             return View();
