@@ -1,0 +1,58 @@
+body{
+    min-width: 400px;
+}
+.container-fluid{
+    border-color: #e74944;
+    background-color: #EB6864;
+    height: 60px;
+}
+
+h2{
+    font-weight: 700;
+}
+
+.form-control{
+    max-width: 120px;
+    display: inline-block;
+    
+}
+
+#date{
+    text-align: center;
+    padding: 10px 0;
+}
+
+#Logo{
+    float: left;
+    padding: 19.5px 15px;
+    font-size: 15px;
+    line-height: 21px;
+    height: 60px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-family: "Open Sans", "Arial Narrow Bold",sans-serif;
+    font-weight: 700;
+}
+
+#information img{ 
+    margin: 10px 0; 
+    border-radius: 5px; 
+} 
+
+#information{ 
+    margin: 50px 0; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */ 
+    border-radius: 10px; 
+}
+
+@media (min-width: 991px) {
+  #information {
+    margin: 50px 150px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #information {
+    margin: 50px;
+    }
+}
