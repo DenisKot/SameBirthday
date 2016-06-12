@@ -113,6 +113,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Resorces\Items\1.JPG" />
+    <Content Include="Resorces\Items\0.jpg" />
     <Content Include="Resorces\no-image.png" />
     <Content Include="Resorces\noPicture.png" />
     <Content Include="Scripts\custom.js" />
