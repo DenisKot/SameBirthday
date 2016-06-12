@@ -8,7 +8,7 @@
         <form id="date" action="" role="form">
             <select id="day" name="day" class="form-control">
                 @{
-                    for (int i = 0; i <= 31; i++)
+                    for (int i = 1; i <= 31; i++)
                     {
                         if (@ViewBag.Day == i)
                         {
@@ -112,17 +112,12 @@
         {
             foreach (var item in ViewBag.List)
             {
-                string imgSrc;
-                if (item.Image != null)
+                string imgSrc = Href($"~/Resorces/Items/{item.Index}.jpg");
+                string filePath = Request.MapPath(imgSrc);
+                if (!File.Exists(filePath))
                 {
-                    var base64 = Convert.ToBase64String(item.Image);
-                    imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+                    imgSrc = Href("~/Resorces/noPicture.png");
                 }
-                else
-                {
-                    imgSrc = "../Image/noPicture.png";
-                }
-                
 
                 <div class="row" id="information">
                     <div class="col-xs-4 col-sm-4 col-sm-3">

@@ -20,5 +20,9 @@ namespace SameBirthday.Models
         public int Month { get; set; }
 
         public int Year { get; set; }
+
+        public int Index { get; set; }
+
+        public int Priority { get; set; }
     }
 }
