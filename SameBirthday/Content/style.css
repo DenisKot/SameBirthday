@@ -16,6 +16,49 @@ textarea {
     max-width: 280px;
 }
 
+.image-container {
+    margin-top: 5px; 
+    margin-bottom: 5px;
+}
+
+.text-container {
+    padding: 0px; 
+    padding-right: 20px;
+    padding-left: 2px;
+    padding-top: 12px;
+}
+
+
+@media screen and (max-width: 980px) {
+    .text-container h4 {
+        margin: 0;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .text-container h4 {
+        margin: 0;
+        margin-top: 0px;
+    }
+}
+
+.text-with-margins {
+    margin: 0px;
+    margin-top: 4px;
+}
+
+.description-text {
+    margin: 0px;
+    margin-top: 0px;
+    font-size: 11pt;
+}
+
+.wiki-text {
+    margin: 0px;
+    margin-top: px;
+}
+
 .container-fluid{
     border-color: #e74944;
     background-color: #EB6864;
@@ -80,13 +123,13 @@ h2{
 }
 
 @media (min-width: 991px) {
-  #information {
-    margin: 50px 150px;
+    #information {
+        margin: 50px 150px;
     }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
     #information {
-    margin: 50px;
+        margin: 50px;
     }
 }

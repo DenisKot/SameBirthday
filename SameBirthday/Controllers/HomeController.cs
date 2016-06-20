@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
 using SameBirthday.Data;
+using SameBirthday.Utils;
 
 namespace SameBirthday.Controllers
 {
@@ -14,9 +15,11 @@ namespace SameBirthday.Controllers
                 int day = int.Parse(Request.QueryString["Day"]);
                 int month = int.Parse(Request.QueryString["Month"]);
 
+                this.ViewBag.Title = $"Известные люди родившиеся {day} {DateFormer.GetMonthTitle(month)}";
+
                 using (var context = new DatabaseContext())
                 {
-                    var list = context.Persons.Where(x => x.Day == day && x.Month == month).ToList();
+                    var list = context.Persons.Where(x => x.Day == day && x.Month == month).OrderBy(x => x.Priority).ToList();
                     this.ViewBag.List = list;
                 }
 
@@ -25,9 +28,11 @@ namespace SameBirthday.Controllers
             }
             else
             {
+                this.ViewBag.Title = "SameBirthday - Узнай кто родился с тобою в один день!";
+
                 using (var context = new DatabaseContext())
                 {
-                    var list = context.Persons.ToList();
+                    var list = context.Persons.OrderByDescending(x => x.Index).ToList();
                     this.ViewBag.List = list;
                 }
 
