@@ -119,9 +119,40 @@
     <Content Include="Resorces\Items\13.jpg" />
     <Content Include="Resorces\Items\14.jpg" />
     <Content Include="Resorces\Items\15.jpg" />
+    <Content Include="Resorces\Items\16.jpg" />
+    <Content Include="Resorces\Items\17.jpg" />
+    <Content Include="Resorces\Items\18.jpg" />
+    <Content Include="Resorces\Items\19.jpg" />
     <Content Include="Resorces\Items\2.jpg" />
+    <Content Include="Resorces\Items\20.jpg" />
+    <Content Include="Resorces\Items\21.jpg" />
+    <Content Include="Resorces\Items\22.jpg" />
+    <Content Include="Resorces\Items\23.jpg" />
+    <Content Include="Resorces\Items\24.jpg" />
+    <Content Include="Resorces\Items\25.jpg" />
+    <Content Include="Resorces\Items\26.jpg" />
+    <Content Include="Resorces\Items\27.jpg" />
+    <Content Include="Resorces\Items\28.jpg" />
+    <Content Include="Resorces\Items\29.jpg" />
     <Content Include="Resorces\Items\3.jpg" />
+    <Content Include="Resorces\Items\30.jpg" />
+    <Content Include="Resorces\Items\31.jpg" />
+    <Content Include="Resorces\Items\32.jpg" />
+    <Content Include="Resorces\Items\33.jpg" />
+    <Content Include="Resorces\Items\34.jpg" />
+    <Content Include="Resorces\Items\35.jpg" />
+    <Content Include="Resorces\Items\36.jpg" />
+    <Content Include="Resorces\Items\37.jpg" />
+    <Content Include="Resorces\Items\38.jpg" />
+    <Content Include="Resorces\Items\39.jpg" />
     <Content Include="Resorces\Items\4.jpg" />
+    <Content Include="Resorces\Items\40.jpg" />
+    <Content Include="Resorces\Items\41.JPG" />
+    <Content Include="Resorces\Items\42.jpg" />
+    <Content Include="Resorces\Items\43.jpg" />
+    <Content Include="Resorces\Items\44.jpg" />
+    <Content Include="Resorces\Items\45.jpg" />
+    <Content Include="Resorces\Items\46.jpg" />
     <Content Include="Resorces\Items\5.jpg" />
     <Content Include="Resorces\Items\6.jpg" />
     <Content Include="Resorces\Items\7.jpg" />
@@ -139,6 +170,7 @@
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Properties\PublishProfiles\SameBirtday - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\SameBirtday.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -176,6 +208,9 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Image\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
